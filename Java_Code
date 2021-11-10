@@ -1,0 +1,10 @@
+/* Given non-negative int n, method will return the sum of the digits on the int n */
+public int sumDigits(int n) {
+  String i = Integer.toString(n);
+  if (i.length() < 3) {
+    return (n / 10) + (n % 10);
+  }
+  else {
+    return (n % 10) + sumDigits(n/10);
+  }
+}
